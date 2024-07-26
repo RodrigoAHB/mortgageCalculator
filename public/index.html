@@ -7,52 +7,54 @@
     <title>Mortgage Calculator</title>
 </head>
 <body class="bg-slate-100">
-    <div class="mainContent sm:w-[23.5rem] m-auto bg-white">
-        <div class="formContainer px-6 py-8">
-            <header class="header mb-6">
-                <h1 class="text-2xl text-slate-900 font-myFontBold pb-2">Mortgage Calculator</h1>
+    <div class="mainContent w-[23.5rem] md:w-[43rem] md:my-10 md:rounded-3xl lg:w-[63rem] m-auto bg-white lg:flex">
+        <div class="formContainer px-6 py-8 md:p-10 lg:w-[31.5rem]">
+            <header class="header mb-6 md:flex md:justify-between md:items-center md:mb-10">
+                <h1 class="text-2xl text-slate-900 font-myFontBold pb-2 md:pb-0">Mortgage Calculator</h1>
                 <h3 class="w-16 leading-tight border-b-2 border-slate-700 cursor-pointer">Clear All</h3>
             </header>
             <div class="mortgageAmount ">
                 <label for="amount" class="block pb-3">Mortgage Amount</label>
                 <div class="input h-12 border border-slate-500 rounded flex justify-between mb-6">
-                    <span class="font-myFontMed text-xl w-12 bg-slate-100 flex items-center justify-center rounded-l-[4px]">£</span>
+                    <span class="font-myFontMed text-xl w-12 bg-slate-100 flex items-center justify-center rounded-l-[4px] md:w-11">£</span>
                     <input type="number" name="amount" id="amount" min="0" class="w-10/12 rounded outline-0 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
                 </div>
             </div>
-            <div class="mortgageTerm">
-                <label for="years" class="block pb-3">Mortgage Term</label>
-                <div class="input h-12 border border-slate-500 rounded flex justify-between mb-6">
-                    <input type="number" name="years" id="years" min="0" class="w-9/12 rounded outline-0 pl-2 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
-                    <span class="font-myFontMed text-xl w-20 bg-slate-100 flex items-center justify-center rounded-r-[4px]">years</span>
+            <div class="md:flex md:justify-between">
+                <div class="mortgageTerm md:w-[18.25rem] lg:w-[12.5rem]">
+                    <label for="years" class="block pb-3">Mortgage Term</label>
+                    <div class="input h-12 border border-slate-500 rounded flex justify-between mb-6">
+                        <input type="number" name="years" id="years" min="0" class="w-9/12 rounded outline-0 pl-2 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+                        <span class="font-myFontMed text-xl w-20 bg-slate-100 flex items-center justify-center rounded-r-[4px]">years</span>
+                    </div>
+                </div>
+                <div class="mortgageIntRate md:w-[18.25rem] lg:w-[12.5rem]">
+                    <label for="intRate" class="block pb-3">Interest Rate</label>
+                    <div class="input h-12 border border-slate-500 rounded flex justify-between mb-6">
+                        <input type="number" name="intRate" id="intRate" class="w-10/12 rounded outline-0 pl-2 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
+                        <span class="font-myFontMed text-xl w-12 bg-slate-100 flex items-center justify-center rounded-r-[4px]">%</span>
+                    </div>
                 </div>
             </div>
-            <div class="mortgageIntRate">
-                <label for="intRate" class="block pb-3">Interest Rate</label>
-                <div class="input h-12 border border-slate-500 rounded flex justify-between mb-6">
-                    <input type="number" name="intRate" id="intRate" class="w-10/12 rounded outline-0 pl-2 [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none">
-                    <span class="font-myFontMed text-xl w-12 bg-slate-100 flex items-center justify-center rounded-r-[4px]">%</span>
-                </div>
-            </div>
-            <div class="mortgageIntRate mb-6">
+            <div class="mortgageIntRate mb-6 md:mb-10">
                 <label for="amount" class="block pb-3">Mortgage Type</label>
                 <div class="input h-12 border border-slate-500 rounded mb-3 flex items-center">
                     <input type="radio" name="mortType" id="repayment" class="w-5 h-5 mx-4">
                     <label for="repayment" class="text-slate-900 font-myFontBold text-l">Repayment</label>
                 </div>
-                <div class="input h-12 border border-slate-500 rounded mb-3 flex items-center">
+                <div class="input h-12 border border-slate-500 rounded mb-3 flex items-center md:mb-0">
                     <input type="radio" name="mortType" id="interest" class="w-5 h-5 mx-4">
                     <label for="interest" class="text-slate-900 font-myFontBold text-l">Interest Only</label>
                 </div>
             </div>
-            <div class="button bg-lime h-14 rounded-full flex items-center justify-center">
+            <div class="button bg-lime h-14 rounded-full flex items-center justify-center md:w-[19.6rem]">
                 <button class="flex font-myFontBold text-slate-900"> 
                     <img src="imgs/icon-calculator.svg" alt="Calculator image" class="mr-3">Calculate Repayments
                 </button>
             </div>
         </div>
-        <div class="resultsContainer--empty bg-slate-900 px-6 py-8 flex-col">
-            <img src="imgs/illustration-empty.svg" alt="Calculator, money and pencil image" class="m-auto pb-4">
+        <div class="resultsContainer--empty bg-slate-900 px-6 py-8 flex-col md:rounded-b-3xl md:p-10 lg:rounded-r-3xl lg:rounded-bl-[5rem] lg:w-[31.5rem] lg:flex lg:justify-center lg:items-center">
+            <img src="imgs/illustration-empty.svg" alt="Calculator, money and pencil image" class="m-auto pb-4 lg:m-0">
             <h3 class="text-2xl font-myFontBold text-white text-center pb-4">Results shown here</h3>
             <p class="text-center text-slate-300">Complete the form and click “calculate repayments” to see what your monthly repayments would be.</p>
         </div>
